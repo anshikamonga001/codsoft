@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <h1 style="color: white;"><center>Calculator</center></h1>
+        <link rel="stylesheet" type="text/css" href="calculator.css">
+    </head>
+    <script>
+        function a(value) {
+            document.getElementById('display').value += value;
+        }
+    
+        function o(operator) {
+            document.getElementById('display').value += operator;
+        }
+    
+        function cleard() {
+            document.getElementById('display').value = '';
+        }
+    
+    function calculate() {
+        var expression = document.getElementById('display').value;
+        var result = eval(expression);
+        if (result !== undefined) {
+            document.getElementById('display').value = result;
+        } else {
+            document.getElementById('display').value = '';
+        }
+    }
+    </script>
+    <body style="background-color: navy;">
+        New line
+        <div class="box" style="border-color: white;">
+       
+                <input type="text" name="bg" id="display" style="height: 50px;width: 300px;margin-top: 20px;">
+           <br>
+           <br>
+           <br>
+            <div class="num">
+                <center><input type="button" name="a" value="AC" style="background-color: rgb(128, 128, 128);color: black;" class="s" onclick="cleard()" ></center>
+            </div>
+            <div class="num">
+                <center><input type="button" name="b" value="+/-" style="background-color: rgb(151, 151, 151);color: black;" class="s"  ></center>
+            </div>
+            <div class="num">
+                <center><input type="button" name="c" value="%" style="background-color: rgb(128, 128, 128);color: black;"  class="s"  ></center>
+            </div>
+            <div class="f">
+                <center><input type="button" name="d" value="/" style="background-color: rgb(98, 94, 94);color: white;" class="g" onclick="o('/')"></center>
+            </div>
+            <div class="num">
+              <center><input type="button" name="bg" value="7" style="background-color: rgb(36, 36, 36);color:white;" class="s" onclick="a(7)"></center>
+            </div>
+            <div class="num">
+                <center><input type="button" name="bg" value="8" style="background-color: rgb(36, 36, 36);color:white;" class="s" onclick="a(8)"></center>
+            </div>
+            <div class="num">
+                <center><input type="button" name="bg" value="9" style="background-color: rgb(36,36 ,36 );color:white;" class="s" onclick="a(9)" ></center>
+            </div>
+            <div class="f">
+                <center><input type="button" name="e" value="x" style="background-color: rgb(128, 128, 128);color: white;" class="g" onclick="o('x')"></center>
+            </div>
+            <div class="num">
+                <center><input type="button" name="bg" value="4" style="background-color: rgb(36,36 ,36 );color:white;" class="s"  onclick="a(4)"></center>
+            </div>
+            <div class="num">
+                <center><input type="button" name="bg" value="5" style="background-color: rgb(36, 36, 36);color:white;" class="s" onclick="a(5)"></center>
+            </div>
+            <div class="num">
+                <center><input type="button" name="bg" value="6" style="background-color: rgb(36, 36, 36);color:white;"  class="s" onclick="a(6)" ></center>
+            </div>
+            <div class="f">
+                <center><input type="button" name="f" value="-" style="background-color: rgb(123, 123, 123);color: white;" class="g" onclick="o('-')"></center>
+            </div>
+            <div class="num">
+                <center><input type="button" name="bg" value="1" style="background-color: rgb(36, 36, 36);color:white;" class="s" onclick="a(1)"></center>
+            </div>
+            <div class="num">
+                <center><input type="button" name="bg" value="2" style="background-color: rgb(36, 36, 36);color:white;"  class="s" onclick="a(2)" ></center>
+            </div>
+            <div class="num">
+                <center><input type="button" name="bg" value="3" style="background-color: rgb(36, 36,36 );color:white;" class="s" onclick="a(3)"></center>
+            </div>
+            <div class="f">
+                <center><input type="button" name="h" value="+" style="background-color: rgb(128, 128, 128);color: white;" class="g" onclick="o('+')" ></center>
+            </div>
+            <div class="z">
+                <center><input type="button" name="bg" value="0" class="d" style="background-color: rgb(36,36,36);color:white;" onclick="a(0)" ></center>
+            </div>
+            <div class="num">
+                <center><input type="button" name="i" value="." class="s" style="background-color: rgb(36, 36, 36);color:white;" onclick="o('.')"></center>
+            </div>
+            <div class="f">
+                <center><input type="button" name="j" value="=" style="background-color: rgb(128, 128, 128);color: white;" class="g" onclick="calculate()" ></center>
+            </div>
+        </div>
+        <p>I am learning how to use javascript</p>
+    </body>
+</html>
